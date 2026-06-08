@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Workshop - ThienCR7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+
+    <div id="home-view" class="active-view container mx-auto px-4 py-20 text-center relative">
+        <h1 class="title-main uppercase tracking-wider mb-4">Battery Workshop</h1>
+        <p class="sub-desc mb-12 italic">Đóng pin dự phòng, Đóng pin máy công cụ, Làm loa Karaoke theo yêu cầu, Sửa chữa đồ điện tử</p>
+       
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <button onclick="openCategory('du-phong', 'Pin Dự Phòng')" class="btn-du-phong h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
+                <span class="btn-text">🔋 Pin Dự Phòng</span>
+            </button>
+            <button onclick="openCategory('may-cong-cu', 'Pin Máy Công Cụ')" class="btn-may-cong-cu h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
+                <span class="btn-text">🛠️ Pin Máy Công Cụ</span>
+            </button>
+            <button onclick="openCategory('luu-tru', 'Pin Cho Lưu Trữ')" class="btn-luu-tru h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
+                <span class="btn-text">🏠 Pin Cho Lưu Trữ</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="category-view" class="hidden-view container mx-auto px-4 py-10">
+        <div class="flex items-center justify-between mb-10 border-b border-gray-700 pb-6">
+            <h2 id="category-title" class="text-3xl font-bold text-highlight">Tên danh mục</h2>
+            <button onclick="goHome()" class="bg-btn-custom hover:bg-gray-600 px-5 py-2 rounded-lg transition">⬅ Back về trang chủ</button>
+        </div>
+        <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+
+    <div id="product-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <div class="bg-card p-8 rounded-2xl max-w-2xl w-full relative border border-gray-700">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-3xl text-gray-400 hover:text-white">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <div class="fixed bottom-4 left-0 w-full text-center py-2 z-10">
+        <p class="footer-text">---- Liên hệ Nguyễn Hữu Thiện để được tư vấn nhé ----</p>
+    </div>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* =========================================================================
+   BẢNG MÀU & THÔNG SỐ TOÀN CỤC (DESIGN TOKENS)
+   ========================================================================= */
+:root {
+    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* 1. NỀN & KHUNG */
+    --bg-page: #a0e5f1;
+    --bg-card: #91dce0;
+    --bg-inner: #d4f2f3;
+    --bg-button: #b1ebf0;
+    
+    /* 2. CHỮ & ĐIỂM NHẤN */
+    --primary-text: #01010e; /* Đã đổi sang màu đậm để dễ đọc trên nền sáng */
+    --color-highlight: #e7f52c;
+    
+    /* 3. NÚT CHỨC NĂNG (TRANG CHỦ) */
+    --color-du-phong: #2563eb;
+    --color-may-cong-cu: #16a34a;
+    --color-luu-tru: #673aed;
+    
+    /* 4. KÍCH THƯỚC (THEO YÊU CẦU CỦA BRO) */
+    --size-h1: 3rem;
+    --size-sub: 1rem;
+    --size-btn-text: 1.25rem;
+    --size-footer: 0.875rem;
+}
+
+/* =========================================================================
+   ĐỊNH DẠNG CƠ BẢN
+   ========================================================================= */
+body { 
+    font-family: var(--main-font); 
+    background-color: var(--bg-page); 
+    color: var(--primary-text); 
+}
+
+.hidden-view { display: none; }
+.active-view { display: block; }
+
+/* =========================================================================
+   CÁC LỚP TIỆN ÍCH (CUSTOM UTILITIES)
+   ========================================================================= */
+/* Khung sản phẩm & Popup */
+.bg-card { background-color: var(--bg-card); }
+.bg-inner { background-color: var(--bg-inner); }
+.bg-btn-custom { background-color: var(--bg-button); }
+.text-highlight { color: var(--color-highlight); }
+
+/* Typography */
+.title-main { font-size: var(--size-h1); color: var(--color-highlight); font-weight: bold; }
+.sub-desc { font-size: var(--size-sub); color: #6b7280; } /* Màu xám để dễ nhìn */
+.footer-text { font-size: var(--size-footer); color: var(--size-footer); text-align: center; margin-top: 2rem; }
+
+/* Nút danh mục trang chủ */
+.btn-du-phong { background-color: var(--color-du-phong); color: white; }
+.btn-may-cong-cu { background-color: var(--color-may-cong-cu); color: white; }
+.btn-luu-tru { background-color: var(--color-luu-tru); color: white; }
+
+.btn-du-phong:hover { background-color: #1d4ed8; }
+.btn-may-cong-cu:hover { background-color: #15803d; }
+.btn-luu-tru:hover { background-color: #6d28d9; }
+
+.btn-text { font-size: var(--size-btn-text); color: #ffffff; font-weight: 600; }
