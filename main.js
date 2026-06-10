@@ -70,8 +70,8 @@ function showDetail(id) {
                 <div class="img-container w-full h-full rounded-xl bg-inner shadow-inner border border-gray-700 overflow-hidden flex items-center justify-center">
                     <img id="main-target-img" src="${currentImgList[0]}" class="max-w-full max-h-full object-contain transition-all duration-300">
                 </div>
-                <button onclick="changeImage(-1)" class="${arrowClass} absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 text-white font-bold rounded-full flex items-center justify-center transition shadow-md z-10 text-xl">&#10094;</button>
-                <button onclick="changeImage(1)" class="${arrowClass} absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 text-white font-bold rounded-full flex items-center justify-center transition shadow-md z-10 text-xl">&#10095;</button>
+                <button onclick="changeImage(-1)" class="${arrowClass} absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all z-10 text-xl font-bold border border-white/20">&#10094;</button>
+                <button onclick="changeImage(1)" class="${arrowClass} absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all z-10 text-xl font-bold border border-white/20">&#10095;</button>
             </div>
             <p class="text-lg uppercase tracking-wider mt-6 mb-4 font-semibold text-gray-700">
                 Danh mục: ${p.category === 'du-phong' ? 'Pin Dự Phòng' : p.category === 'may-cong-cu' ? 'Pin Máy Công Cụ' : 'Pin Lưu Trữ hehe'}

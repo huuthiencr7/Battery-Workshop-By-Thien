@@ -4,7 +4,7 @@ const products = [
         id: 1, 
         category: 'du-phong', 
         name: 'Sạc dự phòng 25.000 mah', 
-        fullDesc: 'Sạc dự phòng 25.000 mah<br>Lõi pin: LGMJ1, EVE35V<br>Dung lượng: 25.000 mah<br>Công suất 22.5W<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Giá:420K',
+        fullDesc: 'Sạc dự phòng 25.000 mah<br>Lõi pin: LGMJ1, EVE35V<br>Dung lượng: 25.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C, Micro, Lightning<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 160x82x24<br>Giá:420K',
         image: 'media/sdp8cellnhom3.jpg', // Đường dẫn lấy ảnh từ thư viện media của m
          // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
         images: [
@@ -19,10 +19,46 @@ const products = [
     { 
         id: 2, 
         category: 'du-phong', 
-        name: 'Trạm Sạc Dự Phòng 65W PD', 
-        shortDesc: 'Sạc nhanh siêu tốc cho Laptop, Điện thoại, Máy tính bảng.', 
-        fullDesc: 'Dung lượng thực 20.000mAh sử dụng lốc cell Lithium chính hãng nội trở thấp. Thiết kế vỏ hợp kim nhôm CNC tản nhiệt tốt, trang bị mạch sạc nhanh đa giao thức Power Delivery 65W.', 
-        image: 'media/pin-du-phong/sac-65w.jpg'
+        name: 'Sạc Dự Phòng 20.000 mah', 
+        fullDesc: 'Sạc dự phòng 20.000 mah<br>Lõi pin: LG50LT, LGM52VT, Samsung50E<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Có đèn led và dây sạc type C và Lightning đi kèm<br>Kích thước:120x52x55<br>Giá:450K',
+        image: 'media/sdp_Nhom_4cell_Lightandcable_Green.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/sdp_Nhom_4cell_Lightandcable_Green.jpg", 
+           "media/sdp_Nhom_4cell_Lightandcable_White.jpg", 
+           "media/sdp_Nhom_4cell_Lightandcable.jpg"
+          
+        ]
+    },
+    { 
+        id: 3, 
+        category: 'du-phong', 
+        name: 'Sạc dự phòng 25.000 mah', 
+        fullDesc: 'Sạc dự phòng 25.000 mah<br>Lõi pin: LGMJ1, EVE35V<br>Dung lượng: 25.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ mica và nhựa ABS<br>Skin Pin in theo yêu cầu +20K<br>Kích thước: 150x45x56<br>Giá:400K',
+        image: 'media/sdp_8cell_18650_Skin1.jpg', // Đường dẫn lấy ảnh từ thư viện media của m
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/sdp_8cell_18650_Skin1.jpg", 
+           "media/sdp_8cell_18650_Skin4.jpg", 
+           "media/sdp_8cell_18650_Skin2.jpg",
+           "media/Skin_18650.jpg"
+          
+        ]
+       
+    },
+    { 
+        id: 4, 
+        category: 'du-phong', 
+        name: 'Sạc Dự Phòng 20.000 mah', 
+        fullDesc: 'Sạc dự phòng 20.000 mah<br>Lõi pin: LG50LT, LGM52VT, Samsung50E<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
+        image: 'media/sdp_Nhom_4cell.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/sdp_Nhom_4cell.jpg", 
+           "media/sdp_Nhom_4cell2.jpg", 
+           "media/sdp_Nhom_4cell3.jpg",
+           "media/sdp_Nhom_4cell4.jpg"
+        ]
     },
 
     // --- 🛠️ PIN MÁY CÔNG CỤ ---
