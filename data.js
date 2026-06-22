@@ -4,7 +4,7 @@ const products = [
         id: 1, 
         category: 'du-phong', 
         name: 'Sạc dự phòng 25.000 mah', 
-        fullDesc: 'Sạc dự phòng 25.000 mah<br>Lõi pin: LGMJ1, EVE35V<br>Dung lượng: 25.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C, Micro, Lightning<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 160x82x24<br>Giá:420K',
+        fullDesc: 'Sạc dự phòng 25.000 mah<br>Lõi pin: LGMJ1, EVE35V<br>Dung lượng: 25.000 mah<br>Công suất 22.5W<br>Màu sắc: Đen, Xanh dương<br>Cổng sạc input: Type C, Micro, Lightning<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 160x82x24<br>Giá:420K',
         image: 'media/sdp8cellnhom3.jpg', // Đường dẫn lấy ảnh từ thư viện media của m
          // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
         images: [
@@ -20,7 +20,7 @@ const products = [
         id: 2, 
         category: 'du-phong', 
         name: 'Sạc Dự Phòng 20.000 mah', 
-        fullDesc: 'Sạc dự phòng 20.000 mah<br>Lõi pin: LG50LT, LGM52VT, Samsung50E<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Có đèn led và dây sạc type C và Lightning đi kèm<br>Kích thước:120x52x55<br>Giá:450K',
+        fullDesc: 'Sạc dự phòng 20.000 mah<br>Lõi pin: LG50LT, LGM52VT, Samsung50E<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Màu sắc: Đen, xanh ngọc, Xám<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Có đèn led và dây sạc type C và Lightning đi kèm<br>Kích thước:120x52x55<br>Giá:450K',
         image: 'media/sdp_Nhom_4cell_Lightandcable_Green.jpg',
          // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
         images: [
@@ -46,8 +46,7 @@ const products = [
         ]
        
     },
-    { 
-        id: 4, 
+    {         id: 4, 
         category: 'du-phong', 
         name: 'Sạc Dự Phòng 20.000 mah', 
         fullDesc: 'Sạc dự phòng 20.000 mah<br>Lõi pin: LG50LT, LGM52VT, Samsung50E<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
@@ -60,7 +59,67 @@ const products = [
            "media/sdp_Nhom_4cell4.jpg"
         ]
     },
-
+   {         id: 5, 
+        category: 'du-phong', 
+        name: 'Sạc Dự Phòng 25.000 mah 100W', 
+        fullDesc: 'Sạc dự phòng 25.000 mah 100W<br>Lõi pin: dòng xả cao<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
+        image: 'media/100w.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/100w.jpg", 
+           "media/100w_sp1.jpg", 
+           "media/100w_sp12.jpg"
+        ]
+    },
+    {         id: 6, 
+        category: 'du-phong', 
+        name: 'Sạc Dự Phòng 20.000 mah 100W', 
+        fullDesc: 'Sạc dự phòng 20.000 mah 100W<br>Lõi pin: dòng xả cao<br>Dung lượng: 20.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
+        image: 'media/spd100w.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/spd100w.jpg", 
+           "media/spd100w1.jpg" 
+        ]
+    },
+    {         id: 7, 
+        category: 'du-phong', 
+        name: 'Sạc Dự Phòng 10.000 mah', 
+        fullDesc: 'Sạc dự phòng 10.000 mah<br>Lõi pin: dòng xả cao<br>Dung lượng: 10.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
+        image: 'media/sdp_Nhom_2cell.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/sdp_Nhom_2cell.jpg",  
+           "media/sdp_Nhom_2cell_blue_Balck.jpg", 
+           "media/sdp_Nhom_2cell_black.jpg",
+           "media/sdp_Nhom_2cell_blue.jpg",
+           "media/sdp_Nhom_2cell_type.jpg" 
+        ]
+    },
+    {         id: 8, 
+        category: 'du-phong', 
+        name: 'Sạc Dự Phòng 10.000 mah', 
+        fullDesc: 'Sạc dự phòng 10.000 mah<br>Lõi pin: dòng xả cao<br>Dung lượng: 10.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
+        image: 'media/sdp_Nhom_2cell_sample2.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/sdp_Nhom_2cell_sample2.jpg",  
+           "media/sdp_Nhom_2cell_sample2_Blue.jpg"
+        ]
+    },
+    {         id: 9, 
+        category: 'du-phong', 
+        name: 'Sạc Dự Phòng 10.000 mah', 
+        fullDesc: 'Sạc dự phòng 10.000 mah<br>Lõi pin: dòng xả cao<br>Dung lượng: 10.000 mah<br>Công suất 22.5W<br>Cổng sạc input: Type C<br>Cổng sạc Output: USB, Type C<br>Chất liệu: Vỏ nhôm và nhựa ABS<br>Kích thước: 110x48x47<br>Giá:420K',
+        image: 'media/Spd_mica_2cell_21700_Yellow1.jpg',
+         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
+        images: [
+           "media/Spd_mica_2cell_21700_Yellow1.jpg",  
+           "media/Spd_mica_2cell_21700_Blue.jpg",
+           "media/charging port.jpg",
+           "media/Discharging port.jpg"
+        ]
+    },
     // --- 🛠️ PIN MÁY CÔNG CỤ ---
     { 
         id: 3, 
