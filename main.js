@@ -21,14 +21,41 @@ function hideAllViews() {
 }
 
 // =========================================================================
-// II. HÀM RENDER SẢN PHẨM (ĐÃ TỐI ƯU CÁC CLASS)
+// II. HÀM RENDER SẢN PHẨM (ĐÃ TÍCH HỢP DANH MỤC VIDEO)
 // =========================================================================
 function renderProducts(cat) {
     const list = document.getElementById('product-list');
+
+    // Tích hợp danh mục Video TikTok
+    if (cat === 'video') {
+    list.innerHTML = `
+        <div class="col-span-full flex w-full justify-center py-10 px-4">
+            <div class="tiktok-card">
+                <div class="text-6xl mb-4">📺</div>
+                <h2 class="text-3xl font-black text-gray-800 mb-3">KÊNH TIKTOK</h2>
+                <p class="text-gray-500 mb-8 italic">Nơi chia sẻ quy trình đóng pin, test linh kiện và kiến thức điện tử thực tế.</p>
+                
+                <div class="flex justify-center mb-6">
+                    <div class="bounce-slow text-yellow-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <a href="https://www.tiktok.com/@cristianonguyn" target="_blank" class="tiktok-btn">
+                    XEM VIDEO NGAY 🚀
+                </a>
+            </div>
+        </div>
+    `;
+    return;
+}
+
     const filtered = products.filter(p => p.category === cat);
     
     if(filtered.length === 0) {
-        list.innerHTML = `<p class="sub-desc italic col-span-3 text-center py-10">Sản phẩm đang được cập nhật...</p>`;
+        list.innerHTML = `<p class="sub-desc italic col-span-full text-center py-10">Sản phẩm đang được cập nhật...</p>`;
         return;
     }
 
@@ -43,7 +70,7 @@ function renderProducts(cat) {
                 </div>
             </div>
             <div class="p-6 pt-0 flex justify-center">
-                <span onclick="showDetail(${p.id})" class="detail-link font-semibold hover:underline flex items-center gap-1">
+                <span onclick="showDetail(${p.id})" class="detail-link font-semibold hover:underline flex items-center gap-1 cursor-pointer">
                     Xem chi tiết cấu hình &rarr;
                 </span>
             </div>
@@ -52,7 +79,7 @@ function renderProducts(cat) {
 }
 
 // =========================================================================
-// III. HÀM POP-UP CHI TIẾT (ĐÃ TỐI ƯU CÁC CLASS)
+// III. HÀM POP-UP CHI TIẾT (ĐÃ CÓ NÚT CUỘN TRONG SUỐT)
 // =========================================================================
 let currentImgIndex = 0;
 let currentImgList = [];
@@ -74,12 +101,11 @@ function showDetail(id) {
                 <button onclick="changeImage(1)" class="${arrowClass} absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all z-10 text-xl font-bold border border-white/20">&#10095;</button>
             </div>
             <p class="text-lg uppercase tracking-wider mt-6 mb-4 font-semibold text-gray-700">
-                Danh mục: ${p.category === 'du-phong' ? 'Pin Dự Phòng' : p.category === 'may-cong-cu' ? 'Pin Máy Công Cụ' : 'Pin Lưu Trữ hehe'}
+                Danh mục: ${p.category === 'du-phong' ? 'Pin Dự Phòng' : p.category === 'may-cong-cu' ? 'Pin Máy Công Cụ' : 'Pin Lưu Trữ'}
             </p>
-        <div class="bg-inner p-5 rounded-xl mb-6 border border-gray-500 flex flex-col items-center justify-center">
-            <p class="text-sm leading-relaxed whitespace-pre-line text-left">${p.fullDesc}</p>
-        </div>
-
+            <div class="bg-inner p-5 rounded-xl mb-6 border border-gray-500 flex flex-col items-center justify-center w-full">
+                <p class="text-sm leading-relaxed whitespace-pre-line text-left">${p.fullDesc}</p>
+            </div>
         </div>
     `;
     document.getElementById('product-modal').classList.remove('hidden');

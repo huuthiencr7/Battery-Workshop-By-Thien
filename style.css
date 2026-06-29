@@ -1,64 +1,67 @@
-/* =========================================================================
-   BẢNG MÀU & THÔNG SỐ TOÀN CỤC (DESIGN TOKENS)
-   ========================================================================= */
 :root {
-    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    /* 1. NỀN & KHUNG */
+    --main-font: 'Segoe UI', sans-serif;
     --bg-page: #a0e5f1;
     --bg-card: #91dce0;
     --bg-inner: #d4f2f3;
     --bg-button: #2ce13e;
-    
-    /* 2. CHỮ & ĐIỂM NHẤN */
-    --primary-text: #01010e; /* Đã đổi sang màu đậm để dễ đọc trên nền sáng */
+    --primary-text: #01010e;
     --color-highlight: #2c6cf5;
-    
-    /* 3. NÚT CHỨC NĂNG (TRANG CHỦ) */
     --color-du-phong: #2563eb;
     --color-may-cong-cu: #16a34a;
     --color-luu-tru: #673aed;
-    
-    /* 4. KÍCH THƯỚC (THEO YÊU CẦU CỦA BRO) */
-    --size-h1: 3rem;
-    --size-sub: 1rem;
-    --size-btn-text: 1.25rem;
-    --size-footer: 0.875rem;
+    --color-diy-loa: #06d9b9;
+    --color-Acquy-Xe-May: #068fd9; 
+    --color-video: #068fd9; 
 }
-
-/* =========================================================================
-   ĐỊNH DẠNG CƠ BẢN
-   ========================================================================= */
-body { 
-    font-family: var(--main-font); 
-    background-color: var(--bg-page); 
-    color: var(--primary-text); 
-}
-
+body { font-family: var(--main-font); background-color: var(--bg-page); color: var(--primary-text); }
 .hidden-view { display: none; }
 .active-view { display: block; }
-
-/* =========================================================================
-   CÁC LỚP TIỆN ÍCH (CUSTOM UTILITIES)
-   ========================================================================= */
-/* Khung sản phẩm & Popup */
 .bg-card { background-color: var(--bg-card); }
 .bg-inner { background-color: var(--bg-inner); }
 .bg-btn-custom { background-color: var(--bg-button); }
 .text-highlight { color: var(--color-highlight); }
+.title-main { font-size: 3rem; color: var(--color-highlight); font-weight: bold; }
+.sub-desc { color: #6b7280; }
+.footer-text { color: #4b5563; text-align: center; margin-top: 2rem; }
 
-/* Typography */
-.title-main { font-size: var(--size-h1); color: var(--color-highlight); font-weight: bold; }
-.sub-desc { font-size: var(--size-sub); color: #6b7280; } /* Màu xám để dễ nhìn */
-.footer-text { font-size: var(--size-footer); color: var(--size-footer); text-align: center; margin-top: 2rem; }
-
-/* Nút danh mục trang chủ */
+/* Buttons */
 .btn-du-phong { background-color: var(--color-du-phong); color: white; }
 .btn-may-cong-cu { background-color: var(--color-may-cong-cu); color: white; }
+.btn-Acquy-Xe-May { background-color: var(--color-Acquy-Xe-May); color: white; }
 .btn-luu-tru { background-color: var(--color-luu-tru); color: white; }
-
-.btn-du-phong:hover { background-color: #1d4ed8; }
-.btn-may-cong-cu:hover { background-color: #15803d; }
-.btn-luu-tru:hover { background-color: #6d28d9; }
-
-.btn-text { font-size: var(--size-btn-text); color: #ffffff; font-weight: 600; }
+.btn-diy-loa { background-color: var(--color-diy-loa); color: white; }
+.btn-video { background-color: var(--color-video); color: white; }
+.btn-text { font-size: 1.25rem; font-weight: 600; }
+/* --- Style cho Card TikTok --- */
+.tiktok-card {
+    background-color: #ffffff; /* Màu nền trắng cho card */
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid #f3f4f6;
+    max-width: 24rem; /* Tương đương w-96 */
+    width: 100%;
+    text-align: center;
+}
+.tiktok-btn {
+    display: block;
+    background-color: #54eeee; /* Màu nền nút */
+    color: #000000;            /* Màu chữ nút */
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: all 0.3s;
+}
+.tiktok-btn:hover {
+    transform: scale(1.02);
+    background-color: #b9ea26;
+}
+/* --- Style cho mũi tên nhún nhảy --- */
+.bounce-slow {
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}

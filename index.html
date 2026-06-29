@@ -12,23 +12,42 @@
     <div id="home-view" class="active-view container mx-auto px-4 py-20 text-center relative">
         <h1 class="title-main uppercase tracking-wider mb-4">Battery Workshop</h1>
         <p class="sub-desc mb-12 italic">Đóng pin dự phòng, Đóng pin máy công cụ, Làm loa Karaoke theo yêu cầu, Sửa chữa đồ điện tử</p>
-       
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+        
+        <!-- Đã chỉnh sửa grid: grid-cols-2 trên mobile và grid-cols-4 trên desktop -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            
             <button onclick="openCategory('du-phong', 'Pin Dự Phòng')" class="btn-du-phong h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
                 <span class="btn-text">🔋 Pin Dự Phòng</span>
             </button>
+            
             <button onclick="openCategory('may-cong-cu', 'Pin Máy Công Cụ')" class="btn-may-cong-cu h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
                 <span class="btn-text">🛠️ Pin Máy Công Cụ</span>
             </button>
+            
+            <button onclick="openCategory('Acquy-Xe-May', 'Acquy Xe Máy')" class="btn-Acquy-Xe-May h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
+                <span class="btn-text">⚡ Acquy Xe Máy</span>
+            </button>
+
             <button onclick="openCategory('luu-tru', 'Pin Cho Lưu Trữ')" class="btn-luu-tru h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
-                <span class="btn-text">🏠 Pin Cho Lưu Trữ</span>
+                <span class="btn-text"> ⚙️Pin Cho Lưu Trữ & Thiết bị điện tử</span>
+            </button>
+
+            <!-- Nút mới: DIY Loa -->
+            <button onclick="openCategory('DIY-Loa', 'DIY Loa')" class="btn-diy-loa h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
+                <span class="btn-text">🎵 DIY Loa</span>
+            </button>
+                     
+            <button onclick="openCategory('video', 'Video tham khảo')" class="btn-video h-24 rounded-2xl shadow-2xl transition-all transform hover:scale-105 border border-gray-700 flex flex-col justify-center items-center gap-1 z-10">
+                <span class="btn-text">📺 Video tham khảo</span>
             </button>
         </div>
-    <div class="fixed bottom-4 left-0 w-full text-center py-2 z-10">
-        <p class="footer-text">---- Liên hệ Nguyễn Hữu Thiện để được tư vấn nhé ----</p>
-    </div>
+
+        <div class="fixed bottom-4 left-0 w-full text-center py-2 z-10">
+            <p class="footer-text">---- Liên hệ Nguyễn Hữu Thiện để được tư vấn nhé ----</p>
+        </div>
     </div>
 
+    <!-- Category View -->
     <div id="category-view" class="hidden-view container mx-auto px-4 py-10">
         <div class="flex items-center justify-between mb-10 border-b border-gray-700 pb-6">
             <h2 id="category-title" class="text-3xl font-bold text-highlight">Tên danh mục</h2>
@@ -37,15 +56,16 @@
         <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </div>
 
+    <!-- Modal -->
     <div id="product-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-    <div class="bg-card p-6 rounded-2xl max-w-2xl w-full relative border border-gray-700">
-    <div class="flex justify-end mb-2">
-        <button onclick="closeModal()" class="text-3xl text-gray-700 hover:text-white p-2">
-            &times;
-        </button>
-    </div>
-    <div id="modal-content" class="overflow-y-auto max-h-[70vh]"></div>
-    </div>
+        <div class="bg-card p-6 rounded-2xl max-w-2xl w-full relative border border-gray-700">
+            <div class="flex justify-end mb-2">
+                <button onclick="closeModal()" class="text-3xl text-gray-700 hover:text-white p-2">
+                    &times;
+                </button>
+            </div>
+            <div id="modal-content" class="overflow-y-auto max-h-[70vh]"></div>
+        </div>
     </div>
 
     <script src="data.js"></script>
