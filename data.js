@@ -126,7 +126,7 @@ const products = [
         id: 20, 
         category: 'may-cong-cu', 
         name: 'Pin chân phổ thông 5Ah', 
-        fullDesc: 'Pin chân phổ thông 5mah\n  Phân loại: 10 Cell 18650, báo pin phía trước\n Lõi Pin: EVE25P , Vtc5d, EVE35V, Sunpower...\n Mạch bảo vệ: BW-60A, BM-90A, DX-100A\n Chất liệu: Nhựa ABS\n Giá: 450-550k\n Liên hệ để được tư vấn giá, chọn lõi pin và mạch phù hợp', 
+        fullDesc: 'Pin chân phổ thông 5Ah\n  Phân loại: 10 Cell 18650, báo pin phía trước\n Lõi Pin: EVE25P , Vtc5d, EVE35V, Sunpower...\n Mạch bảo vệ: BW-60A, BM-90A, DX-100A\n Chất liệu: Nhựa ABS\n Giá: 450-550k\n Liên hệ để được tư vấn giá, chọn lõi pin và mạch phù hợp', 
         image: 'media/10_cell_PT_2.jpg',
         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
         images: [
