@@ -227,10 +227,11 @@ const products = [
         category: 'Acquy-Xe-May', 
         name: 'Acquy Xe Máy YT4 Mẫu 2', 
         fullDesc: 'Acquy Xe Máy YT4\n Kích thước (Dài x Rộng x Cao): Khoảng 113 mm x 70 mm x 85 mm. \n Phân loại:\n- Honda: Air Blade (đời cũ), Click, Future (từ năm 2008 trở đi), Wave (các dòng RS, RSV, 100s, ZX), Blade, Winner, Super Cub\n - Yamaha: Exciter, Nouvo (đời 1-5), Nozza, Acruzo, Grande, Janus, Sirius (sau 2010), Jupiter\n - Suzuki: Viva, Axelo, Address, Hayate.\n Lõi Pin: LFP 32700, LFP A123B\n Mạch bảo vệ: BW-QD600A\n Chất liệu: Nhựa ABS & Cọc bình mạ đồng\n Giá: 400-450K', 
-        image: 'media/Acquy_YT4_2_1.jpg',
+        image: 'media/Acquy_YT4_2_2.jpg',
         // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
         images: [
-           "media/Acquy_YT4_2_1.jpg",  
+           "media/Acquy_YT4_2_2.jpg",
+           "media/Acquy_YT4_2_1.jpg",   
            "media/Acquy_YT4_2.jpg"
          
          
