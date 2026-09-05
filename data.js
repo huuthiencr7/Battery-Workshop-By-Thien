@@ -63,7 +63,7 @@ const products = [
    {         id: 5, 
         category: 'du-phong', 
         name: 'Sạc Dự Phòng 30.000 mah 100W', 
-        fullDesc: 'Sạc dự phòng 30.000 mah\n Lõi pin: LG50LT, LGM52VT, Samsung50E\n Dung lượng: 30.000 mah\n Công suất tổng 100W\n Cổng sạc input: Type C\n Cổng sạc Output: USB, Type C\n Chất liệu: Vỏ nhôm và nhựa ABS\n Kích thước: 180x80x27mm\n Giá: 800K',
+        fullDesc: 'Sạc dự phòng 30.000 mah\n Lõi pin: LG50LT, LGM52VT, Samsung50E\n Dung lượng: 30.000 mah\n Công suất tổng 100W\n Cổng sạc input: Type C\n Cổng sạc Output: USB, Type C\n Chất liệu: Vỏ nhôm và nhựa ABS\n Kích thước: 180x80x27mm\n Giá: 800K\n Hết Hàng',
         image: 'media/100w.jpg',
          // Thêm mảng này để chứa nhiều hình cho phần xem chi tiết
         images: [
