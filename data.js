@@ -1,7 +1,7 @@
-// Biến toàn cục chứa danh sách sản phẩm
+// Biến toàn cục chứa danh sách sản phẩm (để các file khác như main.js gọi trực tiếp không bị lỗi)
 let products = [];
 
-// Hàm tự động đọc file Excel
+// Hàm tự động đọc file Excel và điền dữ liệu vào mảng products
 async function loadProductsFromExcel() {
     try {
         let response = await fetch('products.xlsx');
@@ -10,25 +10,24 @@ async function loadProductsFromExcel() {
         let data = await response.arrayBuffer();
         let workbook = XLSX.read(data, { type: 'array' });
         
-        // Lấy sheet đầu tiên
+        // Lấy sheet đầu tiên trong file Excel
         let firstSheetName = workbook.SheetNames[0];
         let worksheet = workbook.Sheets[firstSheetName];
         
-        // Chuyển dữ liệu Excel sang mảng JSON
+        // Chuyển dữ liệu Excel sang dạng JSON
         let rawData = XLSX.utils.sheet_to_json(worksheet);
         
-        // Format lại dữ liệu cho khớp với code web
+        // Map dữ liệu chuẩn vào mảng products của bro
         products = rawData.map(item => ({
             id: isNaN(item.id) ? item.id : Number(item.id),
-            category: item.category,
+            category: item.category ? item.category.trim() : '',
             name: item.name,
             fullDesc: item.fullDesc ? item.fullDesc.replace(/\\n/g, '\n') : '',
-            image: item.image,
-            // Cắt chuỗi ảnh phụ bằng dấu phẩy thành mảng
-            images: item.images ? item.images.split(',').map(img => img.trim()) : [item.image]
+            image: item.image ? item.image.trim() : '',
+            images: item.images ? item.images.split(',').map(img => img.trim()) : (item.image ? [item.image.trim()] : [])
         }));
 
-        // Thêm mục Video TikTok cố định vào cuối
+        // Thêm mục Video TikTok cố định vào cuối danh sách (nếu code gốc của bro có)
         products.push({
             id: "video-tiktok",
             name: "Video Kênh TikTok",
@@ -37,11 +36,19 @@ async function loadProductsFromExcel() {
             image: "https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
         });
 
-        console.log("Đã tải thành công sản phẩm từ Excel!", products);
+        console.log("Đã load xong dữ liệu từ Excel cho trang web:", products);
+        
+        // Sau khi load xong, nếu trang web của bro có hàm render lại giao diện thì gọi nó ở đây
+        if (typeof renderProducts === 'function') {
+            renderProducts();
+        } else if (typeof displayProducts === 'function') {
+            displayProducts();
+        }
+
     } catch (error) {
-        console.error("Lỗi đọc file Excel:", error);
-        alert("Không thể đọc file products.xlsx! Hãy đảm bảo bro đang chạy web qua Local Server.");
+        console.error("Lỗi khi đọc file Excel:", error);
     }
 }
 
-// Chạy hàm load dữ liệu ngay khi load file js
+// Kích hoạt chạy ngay khi load trang
+loadProductsFromExcel();
